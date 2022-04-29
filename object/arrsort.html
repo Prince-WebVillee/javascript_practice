@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      debugger;
+      let arr = [2, 1, 5, 3, 4];
+
+      console.log("before sort", arr);
+      for (var i = 0; i <= arr.length - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+          let temp;
+          temp = arr[i];
+          arr[i] = arr[i + 1];
+          arr[i + 1] = temp;
+          i = -1;
+        }
+      }
+
+      console.log("after sorting in ascending order", arr);
+    </script>
+  </body>
+</html>

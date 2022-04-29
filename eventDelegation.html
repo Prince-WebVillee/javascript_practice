@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border: 2px solid #000000;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid #000000;
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="mytable">
+        <tr>
+
+            <td style="color:red">Red</td>
+            <td style="color:blue">Blue</td>
+            <td style="color:green">Green</td>
+
+        </tr>
+    </table>
+</body>
+<script>
+
+    const table = document.getElementById("mytable")
+    table.addEventListener("click", (e) => {
+
+        console.log(e)
+        const target = e.target
+        if (target) {
+
+
+            e.target.style.color = "Grey"
+            alert("color changed")
+        }
+
+    })
+</script>
+
+</html>

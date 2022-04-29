@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="textbox">
+<button onclick="checkInput()">test input</button>
+<br>
+<h3 style="color:red" id="msg"></h3>
+</body>
+<script>
+
+const checkInput=()=>{
+    let input = document.getElementById("textbox").value
+let msg=document.getElementById("msg")
+msg.innerHTML=""
+try {
+
+if(input=="") throw "textbox is empty"
+if(input>10) throw "input is too high"
+if(input<5) throw "input is too low"
+if(isNaN(input)) throw "input is not a number"
+
+
+}
+catch(e){
+
+// document.getElementById("msg").innerHTML=e
+msg.innerHTML=e
+}
+finally{
+
+document.getElementById("textbox").value=""
+}
+
+}
+</script>
+</html>

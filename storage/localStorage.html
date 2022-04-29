@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+let person = {
+
+    name:"Ajay",
+    age:24,
+    address:"Indore"
+}
+let person1={
+
+    
+
+    name:"John",
+    age:25,
+    address:"Indore"
+}
+let x= document.cookie="username=John"
+
+
+localStorage.setItem("ajay",JSON.stringify(person))
+sessionStorage.setItem("john",JSON.stringify(person1))
+let localStorageData=localStorage.getItem("ajay")
+let sessionStorageData=sessionStorage.getItem("john")
+let localStorageResult =JSON.parse(localStorageData)
+let sessionStorageResult =JSON.parse(sessionStorageData)
+console.log("Data From Local Storage : ",localStorageResult)
+console.log("Data From Session Storage : ",sessionStorageResult)
+
+</script>
+</body>
+</html>
